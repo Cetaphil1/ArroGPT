@@ -6,7 +6,6 @@ import {
   Center,
   Flex,
   Icon,
-  Link,
   Menu,
   MenuButton,
   MenuItem,
@@ -15,12 +14,12 @@ import {
   useColorMode,
   useColorModeValue,
 } from '@chakra-ui/react';
+import Link from 'next/link';
 import { SearchBar } from '@/components/navbar/searchBar/SearchBar';
 import { SidebarResponsive } from '@/components/sidebar/Sidebar';
 import { IoMdMoon, IoMdSunny } from 'react-icons/io';
 import { MdInfoOutline } from 'react-icons/md';
 import APIModal from '@/components/apiModal';
-import NavLink from '../link/NavLink';
 import routes from '@/routes';
 
 export default function HeaderLinks(props: {
@@ -97,11 +96,7 @@ export default function HeaderLinks(props: {
         >
           {/* <Flex bgImage={navImage} borderRadius="16px" mb="28px" alt="" /> */}
           <Flex flexDirection="column">
-            <Link
-              isExternal
-              w="100%"
-              href="https://horizon-ui.com/ai-template/"
-            >
+            <Link href="https://nflvp.com/signin" style={{ width: '100%' }}>
               <Button
                 variant="primary"
                 py="20px"
@@ -115,11 +110,7 @@ export default function HeaderLinks(props: {
                 Buy Horizon AI Template
               </Button>
             </Link>
-            <Link
-              isExternal
-              w="100%"
-              href="https://horizon-ui.com/docs-ai-template/"
-            >
+            <Link href="https://nflvp.com/login" style={{ width: '100%' }}>
               <Button
                 bg={buttonBg}
                 border="1px solid"
@@ -139,11 +130,7 @@ export default function HeaderLinks(props: {
                 See Documentation
               </Button>
             </Link>
-            <Link
-              w="100%"
-              isExternal
-              href="https://github.com/horizon-ui/chatgpt-ai-template"
-            >
+            <Link href="https://nflvp.com/login" style={{ width: '100%' }}>
               <Button
                 w="100%"
                 h="44px"
@@ -218,7 +205,7 @@ export default function HeaderLinks(props: {
             </Text>
           </Flex>
           <Flex flexDirection="column" p="10px">
-            <NavLink href="/settings">
+            <Link href="https://nflvp.com/login">
               <MenuItem
                 _hover={{ bg: 'none' }}
                 _focus={{ bg: 'none' }}
@@ -230,7 +217,7 @@ export default function HeaderLinks(props: {
                   Profile Settings
                 </Text>
               </MenuItem>
-            </NavLink>
+            </Link>
             <MenuItem
               _hover={{ bg: 'none' }}
               _focus={{ bg: 'none' }}

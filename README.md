@@ -41,6 +41,12 @@ Run in the terminal this command:
 npm install
 ```
 
+### Arro GPT setup
+
+1) Put your Arlow key in Settings (gear icon) or in `.env.local` as ARLOW_API_KEY.
+2) Choose "Arro GPT" in the model picker.
+3) `npm install && npm run dev`.
+
 Then run this command to start your local server
 
 ```bash

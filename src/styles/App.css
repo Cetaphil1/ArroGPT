@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
+@import "katex/dist/katex.min.css";
 
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -6,4 +7,41 @@ body {
 
 option {
   color: black;
+}
+
+/* Typing animation for chat bubbles */
+@keyframes typing {
+  0%, 60%, 100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  30% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+}
+
+/* Blinking cursor for typewriter effect */
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+/* Remove any default borders and outlines that might cause thick separators */
+* {
+  outline: none !important;
+}
+
+/* Remove any blue focus borders */
+input:focus,
+button:focus,
+select:focus,
+textarea:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
 }
